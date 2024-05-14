@@ -6,21 +6,33 @@
     <link rel="stylesheet" href="styles.css">
     <title>Personality Quiz</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="start-page">
-            <button id="startButton">Start!</button>
+            <img src="images/title.png" style="width: 1500px; -webkit-filter: drop-shadow(5px 5px 5px #dbb741); filter: drop-shadow(5px 5px 5px #cfa518);">
+            <img src="images/start.png" style="width: 300px" id="startButton">
         </div>
 
         <div id="quiz-page" class="hide">
-            <h2 id="questionNumber"></h2>
-            <p id="questionText"></p>
-            <button class="optionButton" data-type="type1">Option 1</button>
-            <button class="optionButton" data-type="type2">Option 2</button>
-            <button class="optionButton" data-type="type3">Option 3</button>
-            <button class="optionButton" data-type="type4">Option 4</button>
-            <button id="nextButton">Next</button>
+            <div class="questionheader">
+                <h2 id="questionNumber"></h2>
+                <p id="questionText"></p>
+            </div>
+            <div class="answer-grid">
+                <button class="optionButton" data-type="type1">Option 1</button>
+                <button class="optionButton" data-type="type2">Option 2</button>
+                <button class="optionButton" data-type="type3">Option 3</button>
+                <button class="optionButton" data-type="type4">Option 4</button>
+                <button id="nextButton">Next > </button>
+            </div>
+
+            <div id = "myProgress">
+                <div id = "myBar"></div>
+            </div>
         </div>
 
         <div id="results-page">

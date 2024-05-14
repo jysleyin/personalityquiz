@@ -1,3 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-image: linear-gradient(180deg, #1F2041, #424485);
+}
+
+
+.start-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+
+.start-page img {
+    margin-bottom: -50px; /* Adjust the spacing between the images */
+    max-width: 80%;
+    height: auto;
+}
+
+#startButton {
+    cursor: pointer;
+    width: 50%; 
+    max-width: 20%; 
+    height: auto; 
+}
+
+#startButton:hover {
+    width: 150px;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+
+}
+
+.questionheader {
+    background-color: white;;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.questionheader .questionNumber {
+    max-width: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.optionButton {
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    border: 2px solid #393b3a;
+    transition-duration: 0.4s;
+}
+
+.optionButton:hover {
+    background-color: #393b3a;
+    color: white;
+    cursor: pointer;
+}
+
+.optionButton:focus { 
+    background-color: #393b3a;
+    color: white;
+    cursor: pointer;
+}
+
+#nextButton {
+    padding: 10px;
+    background-color: white;;
+    border-radius: 20px;
+    border: 2px solid #171817;
+    transition-duration: 0.4s;
+    cursor:pointer;
+}
+
+#nextButton:hover  {
+    border: 4px solid #171817;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: #211E4B;
+    border-radius:20px;
+  }
+
+
+/* 
+keep at the end  */
 .hide {
     display: none;
 }

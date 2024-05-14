@@ -9,7 +9,7 @@ const quizPage = document.getElementById('quiz-page');
 const questions = [
     {
         question: "You find yourself in an unfamiliar place, surrounded by the eerie shadows of the dark woods. There are four paths. Which one do you choose?",
-        answers: ["1", "2", "3", "a4"]
+        answers: ["Path of ominous shadows peeking through", "Path of nature's symphony", "Path of mesmerizing glow and tiny whispers", "Path of a large body of water"]
     },
     {
         question: "Following the chosen path leads you to a secluded town. Which building do you enter into?",
@@ -59,7 +59,7 @@ const questions = [
 
 
 let currentQuestion = 0;
-let answers = {
+let results = {
     //phoenix
     type1: 0,
     //fairy
@@ -78,15 +78,36 @@ startButton.addEventListener('click', function() {
 
 //next button
 nextButton.addEventListener('click', function(){
-    if(currentQuestion >= questions.length) {
-        displayResults();
-    } else {
-        updateQuestion();
-    }
-    //whichever button is selected, add points here.
-});
+    const selectedButton = document.querySelector('.optionButton.selected');
+    if (selectedButton) {
+        // move to the next question
+        if(currentQuestion >= questions.length) {
+            displayResults();
+        } else {
+            updateQuestion();
+        }
+        // add points based on the selected button
+        const selectedType = selectedButton.dataset.type;
+        results[selectedType]++;
 
+    } else {
+        alert("please select an option before proceeding!");
+    }
+
+});
+optionButtons.forEach(button => {
+    button.addEventListener('click', selectButton);
+})
 //locate the selected button
+function selectButton(e) {
+    //remove all the selected buttons
+    optionButtons.forEach(button => button.classList.remove('selected'));
+
+    //add selected only to the button that has been clicked
+    const selectedButton = e.target;
+    selectedButton.classList.add('selected');
+}
+
 
 //update question on quiz page
 function updateQuestion() {
@@ -98,13 +119,28 @@ function updateQuestion() {
     for (let i = 0; i < optionButtons.length; i++) {
         optionButtons[i].textContent = currentQuestionData.answers[i];
     }
+
+    //remove selected every question!!!!!!!!
+        optionButtons.forEach(button => button.classList.remove('selected'));
+
         currentQuestion++;
+        updateProgressBar();
 }
 
 
 //calculate the results! find max.
 function calculateResult() {
+    let maxType = null;
+    let maxValue = -Infinity;
 
+    for (const type in results) {
+        if (results[type] > maxValue) {
+            maxValue = results[type];
+            maxType = type;
+        }
+    }
+
+    return maxType;
 }
 
 
@@ -112,5 +148,28 @@ function calculateResult() {
 function displayResults() {
     const personalityType = calculateResult();
     quizPage.classList.add('hide');
-    result.textContent = `Your personality type is: ${personalityType}`;
+
+    switch (personalityType) {
+        case "type1":
+            result.textContent = "Your personality type is: Phoenix";
+            break;
+        case "type2":
+            result.textContent = "Your personality type is: Fairy";
+            break;
+        case "type3":
+            result.textContent = "Your personality type is: Elf";
+            break;
+        case "type4":
+            result.textContent = "Your personality type is: Mermaid";
+            break;
+    }
+    
 }
+
+function updateProgressBar() { 
+    var element = document.getElementById("myBar");
+    var totalQuestions = questions.length;
+    var width = ((currentQuestion-1) / totalQuestions) * 100;
+    element.style.width = width + '%';
+  } 
+    
