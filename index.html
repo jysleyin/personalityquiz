@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personality Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="start-page">
+            <button id="startButton">Start!</button>
+        </div>
+
+        <div id="quiz-page" class="hide">
+            <h2 id="questionNumber"></h2>
+            <p id="questionText"></p>
+            <button class="optionButton" data-type="type1">Option 1</button>
+            <button class="optionButton" data-type="type2">Option 2</button>
+            <button class="optionButton" data-type="type3">Option 3</button>
+            <button class="optionButton" data-type="type4">Option 4</button>
+            <button id="nextButton">Next</button>
+        </div>
+
+        <div id="results-page">
+            <!-- results in here -->
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
