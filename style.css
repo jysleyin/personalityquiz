@@ -15,13 +15,6 @@ html, body {
     background-image: linear-gradient(180deg, #1F2041, #424485);
 }
 
-.container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
 
 .start-page {
     display: flex;
@@ -52,6 +45,16 @@ html, body {
     width: 150px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+
+}
+
+
+#quiz-page {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
