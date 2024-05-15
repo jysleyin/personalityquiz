@@ -8,52 +8,52 @@ const quizPage = document.getElementById('quiz-page');
 
 const questions = [
     {
-        question: "You find yourself in an unfamiliar place, surrounded by the eerie shadows of the dark woods. There are four paths. Which one do you choose?",
-        answers: ["Path of ominous shadows peeking through", "Path of nature's symphony", "Path of mesmerizing glow and tiny whispers", "Path of a large body of water"]
+        question: "You find yourself in an unfamiliar place, which road tempts you the most?",
+        answers: ["Cobbled street with lantern-lit alleys", "Twisting, leaf-strewn trail", "The flowery lane with tiny whispers", "The water and occupied animals path"]
     },
     {
         question: "Following the chosen path leads you to a secluded town. Which building do you enter into?",
-        answers: ["1a", "2", "3", "4"]
+        answers: ["Straight to town hall", "The town's library", "The local coffee shop", "The nearest residential house"]
     },
     {
-        question: "Inside the building, you stumble upon a glowing liquid. It pulsates as it seeps into the ground and starts spreading to you closer and closer. It appears to be alive.",
-        answers: ["1", "2a", "3", "4"]
+        question: "You stumble upon a glowing liquid. It pulsates as it seeps into the ground and starts spreading to you closer and closer. It appears to be alive.",
+        answers: ["Assess the situation head-on", "Observe from a distance", "Befriend the liquid", "Stop the spreading quick!"]
     },
     {
-        question: "Amidst the quiet of the town, a distant sound breaks the silence. What do you imagine could be causing it?",
-        answers: ["1", "2", "3a", "4"]
+        question: "A distant sound breaks the silence. What do you imagine could be causing it?",
+        answers: ["A victorious battle made for you", "A mystical natural phenomenon", "A lively carnival approaching the town", "A new friend in need of help"]
     },
     {
         question: "Suddenly, a mysterious figure emerges from the shadows. What is your initial reaction?",
-        answers: ["1", "2", "3", "4"]
+        answers: ["Remain vigilant and prepare for risks", "Try to understand its identity", "Engage in a conversation", "Approach cautiously with concern"]
     },
     {
-        question: "Favorite City?",
-        answers: ["1", "2a", "3", "4"]
+        question: "You receive a gift from the mysterious figure: a new animal companion to support you on your journey. What do you choose?",
+        answers: ["A fierce wolf", "A resourceful owl", "An adventurous monkey", "A loyal horse"]
     },
     {
-        question: "Favorite Celebrity?",
-        answers: ["1", "2", "3", "4"]
+        question: "Your newfound companion shows their appreciation with a gift. Which do you choose?",
+        answers: ["A compass", "An ancient book", "A musical instrument", "Your family's keepsake box"]
     },
     {
-        question: "Favorite Sport?",
-        answers: ["1", "2", "3", "4"]
+        question: "The garden calls for you. What draws you in?",
+        answers: ["The twisting tree bearing golden apples", "The artifact embedded within the tree", "Gnomes having a funny conversation", "The water reflecting the essence of your family"]
     },
     {
-        question: "Favorite Lyric?",
-        answers: ["1", "2", "3", "4"]
+        question: "You are given a power to aid you in your journey. What do you choose?",
+        answers: ["Superhuman strength", "Read minds", "Shapeshifting", "Healing"]
     },
     {
-        question: "Favorite Town?",
-        answers: ["1", "2", "3", "4"]
+        question: "As night falls, the stars grant you one wish. What would you rather be?",
+        answers: ["Respected", "Trusted", "Envied", "Loved"]
     },
     {
-        question: "Favorite Food?",
-        answers: ["1", "2", "3", "4"]
+        question: "When you wake up, you will receive a box. Which one will you select?",
+        answers: ["A heavy golden box with a silver-leaf ribbon", "Ancient wood crafted box, secured with magic", "A colorful box with a radiant glow", "A mossy box wrapped with healing herbs"]
     },
     {
         question: "With the journey coming to an end, what quality of character resonates with you the most?",
-        answers: ["1", "2", "3", "4"]
+        answers: ["Bravery", "Wisdom", "Compassion", "Loyalty"]
     },
 ]
 
