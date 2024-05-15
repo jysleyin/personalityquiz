@@ -149,6 +149,7 @@ function displayResults() {
     const personalityType = calculateResult();
     quizPage.classList.add('hide');
 
+    
     switch (personalityType) {
         case "type1":
             result.textContent = "Your personality type is: Phoenix";
