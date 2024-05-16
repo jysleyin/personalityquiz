@@ -102,8 +102,6 @@ html, body {
 /* quiz stuff! */
 #quiz-page {
     width: 50%;
- 
-    
 }
 
 
@@ -131,6 +129,15 @@ html, body {
     text-align: center;
 }
 
+.image-container {
+    text-align: center;
+}
+
+#questionImage {
+    width: 30%;
+    padding: 20px;
+}
+
 /* answer grid here */
 
 .answer-grid {
@@ -140,7 +147,7 @@ html, body {
     align-items: center;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    padding: 5vh 0vh;
+    padding: 0vh 0vh 3vh 0vh;
 }
 
 /* grid done */
