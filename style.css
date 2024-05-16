@@ -162,6 +162,7 @@ html, body {
 /* progress bar COMPLETED DO NOT TOUCH */
 #myProgress {
     width: 80%;
+    padding: 3px;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
