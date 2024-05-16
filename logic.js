@@ -34,7 +34,7 @@ const questions = [
     },
     {
         question: "Your newfound companion shows their appreciation with a gift. Which do you choose?",
-        answers: ["A compass", "An ancient book", "A musical instrument", "Your family's keepsake box"]
+        answers: ["A magical compass", "An ancient book", "A musical instrument", "Your family's keepsake box"]
     },
     {
         question: "The garden calls for you. What draws you in?",
@@ -42,11 +42,11 @@ const questions = [
     },
     {
         question: "You are given a power to aid you in your journey. What do you choose?",
-        answers: ["Superhuman strength", "Read minds", "Shapeshifting", "Healing"]
+        answers: ["Superhuman strength", "Read minds", "Shape-shifting", "Healing"]
     },
     {
         question: "As night falls, the stars grant you one wish. What would you rather be?",
-        answers: ["Respected", "Trusted", "Envied", "Loved"]
+        answers: ["To be Respected", "To be Trusted", "To be Envied", "To be Loved"]
     },
     {
         question: "When you wake up, you will receive a box. Which one will you select?",
@@ -54,7 +54,7 @@ const questions = [
     },
     {
         question: "With the journey coming to an end, what quality of character resonates with you the most?",
-        answers: ["Bravery", "Wisdom", "Compassion", "Loyalty"]
+        answers: ["To be Brave", "To be Wise", "To be Compassionate", "To be Loyal"]
     },
 ]
 

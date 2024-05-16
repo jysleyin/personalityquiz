@@ -60,12 +60,14 @@ html, body {
 
 .optionButton {
     font-size: 20px;
-    padding: 10px;
+    padding: 15px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 25px;
     border: 2px solid #211E4B;
     transition-duration: 0.4s;
+    /* flex: 1 1 calc(100% - 50px); */
 }
+
 .optionButton.selected {
     background-color: #211E4B;
     color: white;
@@ -80,11 +82,10 @@ html, body {
     font-size: 20px;
     padding: 10px 20px;
     background-color: white;
+    border: 2px solid #211E4B;
     border-radius: 20px;
     cursor:pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transition-duration: 0.4s;
 }
 
 
@@ -101,6 +102,8 @@ html, body {
 /* quiz stuff! */
 #quiz-page {
     width: 50%;
+ 
+    
 }
 
 
@@ -130,14 +133,28 @@ html, body {
 
 /* answer grid here */
 
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    padding: 5vh 0vh;
+}
 
+/* grid done */
 
-
-
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure buttons stack vertically */
+}
 
 /* progress bar COMPLETED DO NOT TOUCH */
 #myProgress {
-    width: 100%;
+    width: 80%;
     background-color: white;
     border-radius: 20px;
     overflow: hidden;
