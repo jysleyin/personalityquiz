@@ -14,6 +14,7 @@ html, body {
     overflow: hidden;
     background-image: url(images/start-page.png);
 }
+
 .container {
     height: 100%;
     display: flex;
@@ -21,6 +22,8 @@ html, body {
     align-items: center;
 
 }
+
+/* start page info :) */
 
 .start-page {
     display: flex;
@@ -34,10 +37,12 @@ html, body {
 
 
 .start-page img {
-    margin-bottom: -50px; /* Adjust the spacing between the images */
+    margin-bottom: -50px; 
     max-width: 80%;
     height: auto;
 }
+
+/* !!!!!!!!buttons below */
 
 #startButton {
     cursor: pointer;
@@ -53,30 +58,8 @@ html, body {
 
 }
 
-
-/* #quiz-page {
-    height: 100%;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-} */
-
-.questionheader {
-    background-color: white;;
-    border-radius: 10px;
-    padding: 5px;
-}
-
-.questionheader .questionNumber {
-    max-width: 20px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-
 .optionButton {
+    font-size: 20px;
     padding: 10px;
     background-color: white;
     border-radius: 20px;
@@ -93,17 +76,66 @@ html, body {
     cursor: pointer;
 }
 
-
 #nextButton {
-    padding: 10px;
-    background-color: white;;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: white;
     border-radius: 20px;
-    border: 2px solid #211E4B;
-    transition-duration: 0.4s;
     cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
+#nextButton:hover {
+    background-color: #211E4B;
+    color: white;
+    cursor: pointer;
+}
+
+/* !!!!!!!!buttons above */
+
+
+
+/* quiz stuff! */
+#quiz-page {
+    width: 50%;
+}
+
+
+.questionheader {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#questionNumber {
+    font-size: 4vh;
+    max-width: 30%;
+    padding: 10px;
+}
+
+#questionText {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+/* answer grid here */
+
+
+
+
+
+
+/* progress bar COMPLETED DO NOT TOUCH */
 #myProgress {
     width: 100%;
     background-color: white;

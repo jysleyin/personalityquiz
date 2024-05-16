@@ -5,6 +5,7 @@ const result = document.getElementById('results-page');
 const questionNumber = document.getElementById('questionNumber');
 const questionText = document.getElementById('questionText');
 const quizPage = document.getElementById('quiz-page');
+const audio = new Audio("audio/click.mp3");
 
 const questions = [
     {
@@ -71,6 +72,7 @@ let results = {
 };
 
 startButton.addEventListener('click', function() {
+    audio.play();
     document.querySelector('.start-page').classList.add('hide');
     quizPage.classList.remove('hide');
     updateQuestion();
@@ -79,11 +81,15 @@ startButton.addEventListener('click', function() {
 });
 
 optionButtons.forEach(button => {
-    button.addEventListener('click', selectButton);
-})
+    button.addEventListener('click', function() {
+        selectButton(event); 
+        playClickSound(); 
+    });
+});
 
 //next button
 nextButton.addEventListener('click', function(){
+    playClickSound();
     const selectedButton = document.querySelector('.optionButton.selected');
     if (selectedButton) {
         // move to the next question
@@ -116,7 +122,7 @@ function selectButton(e) {
 //update question on quiz page
 function updateQuestion() {
     const currentQuestionData = questions[currentQuestion];
-    questionNumber.textContent = `Q${currentQuestion + 1} out of ${questions.length}`;
+    questionNumber.innerHTML = `Q${currentQuestion + 1}<br> ${currentQuestion + 1}/${questions.length}`;
     questionText.textContent = currentQuestionData.question;
 
     // update answer options
@@ -127,7 +133,6 @@ function updateQuestion() {
     //remove selected every question!!!!!!!!
         optionButtons.forEach(button => button.classList.remove('selected'));
 
-        // If it's the last question, change the button text to "Done"
         if (currentQuestion === questions.length - 1) {
             nextButton.textContent = "DONE";
         } else {
@@ -184,3 +189,7 @@ function updateProgressBar() {
     element.style.width = width + '%';
   } 
     
+function playClickSound() {
+    audio.currentTime = 0; 
+    audio.play();
+}
