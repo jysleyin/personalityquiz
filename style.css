@@ -12,7 +12,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(180deg, #1F2041, #424485);
+    background-image: url(images/start-page.png);
 }
 .container {
     height: 100%;
@@ -28,7 +28,6 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    background-image: url(images/start-page.png);
     background-size: cover;
     background-position: center;
 }
@@ -81,34 +80,29 @@ html, body {
     padding: 10px;
     background-color: white;
     border-radius: 20px;
-    border: 2px solid #393b3a;
+    border: 2px solid #211E4B;
     transition-duration: 0.4s;
 }
-
+.optionButton.selected {
+    background-color: #211E4B;
+    color: white;
+}
 .optionButton:hover {
-    background-color: #393b3a;
+    background-color: #211E4B;
     color: white;
     cursor: pointer;
 }
 
-.optionButton:focus { 
-    background-color: #393b3a;
-    color: white;
-    cursor: pointer;
-}
 
 #nextButton {
     padding: 10px;
     background-color: white;;
     border-radius: 20px;
-    border: 2px solid #171817;
+    border: 2px solid #211E4B;
     transition-duration: 0.4s;
     cursor:pointer;
 }
 
-#nextButton:hover  {
-    border: 4px solid #171817;
-}
 
 #myProgress {
     width: 100%;

@@ -62,9 +62,9 @@ let currentQuestion = 0;
 let results = {
     //phoenix
     type1: 0,
-    //fairy
-    type2: 0,
     //elf
+    type2: 0,
+    //fairy
     type3: 0,
     //mermaid
     type4: 0
@@ -74,7 +74,13 @@ startButton.addEventListener('click', function() {
     document.querySelector('.start-page').classList.add('hide');
     quizPage.classList.remove('hide');
     updateQuestion();
+    document.body.style.backgroundImage = "url('images/background.png')";
+    
 });
+
+optionButtons.forEach(button => {
+    button.addEventListener('click', selectButton);
+})
 
 //next button
 nextButton.addEventListener('click', function(){
@@ -95,9 +101,7 @@ nextButton.addEventListener('click', function(){
     }
 
 });
-optionButtons.forEach(button => {
-    button.addEventListener('click', selectButton);
-})
+
 //locate the selected button
 function selectButton(e) {
     //remove all the selected buttons
@@ -123,6 +127,12 @@ function updateQuestion() {
     //remove selected every question!!!!!!!!
         optionButtons.forEach(button => button.classList.remove('selected'));
 
+        // If it's the last question, change the button text to "Done"
+        if (currentQuestion === questions.length - 1) {
+            nextButton.textContent = "DONE";
+        } else {
+            nextButton.textContent = "NEXT";
+        }
         currentQuestion++;
         updateProgressBar();
 }
@@ -155,10 +165,10 @@ function displayResults() {
             result.textContent = "Your personality type is: Phoenix";
             break;
         case "type2":
-            result.textContent = "Your personality type is: Fairy";
+            result.textContent = "Your personality type is: Elf";
             break;
         case "type3":
-            result.textContent = "Your personality type is: Elf";
+            result.textContent = "Your personality type is: Fairy";
             break;
         case "type4":
             result.textContent = "Your personality type is: Mermaid";
