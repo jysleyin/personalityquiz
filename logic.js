@@ -6,68 +6,130 @@ const questionNumber = document.getElementById('questionNumber');
 const questionText = document.getElementById('questionText');
 const questionImage = document.getElementById('questionImage');
 const quizPage = document.getElementById('quiz-page');
+const soundButton = document.getElementById('soundButton');
 const audio = new Audio("audio/click.mp3");
+const background = new Audio ("audio/background-music.mp3");
 
 const questions = [
     {
         question: "You find yourself in an unfamiliar place, which road tempts you the most?",
         imageSrc: "images/image1.png",
-        answers: ["Cobbled street with lantern-lit alleys", "Twisting, leaf-strewn trail", "The flowery lane with tiny whispers", "The water and occupied animals path"]
+        answers: [
+            { text: "Cobbled street with lantern-lit alleys", type: "type1" },
+            { text: "Twisting, leaf-strewn trail", type: "type2" },
+            { text: "The flowery lane with tiny whispers", type: "type3" },
+            { text: "The water and occupied animals path", type: "type4" }
+        ]
     },
     {
         question: "Following the chosen path leads you to a secluded town. Which building do you enter into?",
         imageSrc: "images/image2.png",
-        answers: ["Straight to town hall", "The town's library", "The local coffee shop", "The nearest residential house"]
+        answers: [
+            { text: "Straight to town hall", type: "type1" },
+            { text: "The town's library", type: "type2" },
+            { text: "The local coffee shop", type: "type3" },
+            { text: "The nearest residential house", type: "type4" }
+        ]
     },
     {
         question: "You stumble upon a glowing liquid. It pulsates as it seeps into the ground and starts spreading to you closer and closer. It appears to be alive.",
         imageSrc: "images/image3.png",
-        answers: ["Assess the situation head-on", "Observe from a distance", "Befriend the liquid", "Stop the spreading quick!"]
+        answers: [
+            { text: "Assess the situation head-on", type: "type1" },
+            { text: "Observe from a distance", type: "type2" },
+            { text: "Befriend the liquid", type: "type3"},
+            { text: "Stop the spreading quick!", type: "type4"}
+        ]
     },
     {
         question: "A distant sound breaks the silence. What do you imagine could be causing it?",
         imageSrc: "images/image4.png",
-        answers: ["A victorious battle made for you", "A mystical natural phenomenon", "A lively carnival approaching the town", "A new friend in need of help"]
+        answers: [
+            { text: "A victorious battle made for you", type: "type1"},
+            { text: "A mystical natural phenomenon", type: "type2"},
+            { text: "A lively carnival approaching the town", type: "type3"},
+            { text: "A new friend in need of help", type: "type4"},
+        ]
     },
     {
         question: "Suddenly, a mysterious figure emerges from the shadows. What is your initial reaction?",
         imageSrc: "images/placeholder.jpg",
-        answers: ["Remain vigilant and prepare for risks", "Try to understand its identity", "Engage in a conversation", "Approach cautiously with concern"]
+        answers: [
+            { text: "Remain vigilant and prepare for risks", type: "type1"},
+            { text: "Try to understand its identity", type: "type2"},
+            { text: "Engage in a conversation", type: "type3"},
+            { text: "Approach cautiously with concern", type: "type4"},
+        ]
     },
     {
         question: "You receive a gift from the mysterious figure: a new animal companion to support you on your journey. What do you choose?",
         imageSrc: "images/placeholder.jpg",
-        answers: ["A fierce wolf", "A resourceful owl", "An adventurous monkey", "A loyal horse"]
+        answers: [
+            { text: "A fierce wolf", type: "type1"},
+            { text: "A resourceful owl", type: "type2"},
+            { text: "An adventurous monkey", type: "type3"},
+            { text: "A loyal horse", type: "type4"},
+        ]
     },
     {
         question: "Your newfound companion shows their appreciation with a gift. Which do you choose?",
         imageSrc: "images/placeholder.jpg",
-        answers: ["A magical compass", "An ancient book", "A musical instrument", "Your family's keepsake box"]
+        answers: [
+            { text: "A magical compass",  type: "type1"},
+            { text: "An ancient book",  type: "type2"},
+            { text: "A musical instrument",  type: "type3"},
+            { text: "Your family's keepsake box",  type: "type4"},
+        ]
     },
     {
         question: "The garden calls for you. What draws you in?",
         imageSrc: "images/placeholder.jpg",
-        answers: ["The twisting tree bearing golden apples", "The artifact embedded within the tree", "Gnomes having a funny conversation", "The water reflecting the essence of your family"]
+        answers: [
+            { text: "The twisting tree bearing golden apples",  type: "type1"},
+            { text: "The artifact embedded within the tree",  type: "type2"},
+            { text: "Gnomes having a funny conversation",  type: "type3"},
+            { text: "The water reflecting the essence of your family", type: "type4"},
+        ]
     },
     {
         question: "You are given a power to aid you in your journey. What do you choose?",
         imageSrc: "images/image9.png",
-        answers: ["Superhuman strength", "Read minds", "Shape-shifting", "Healing"]
+        answers: [
+            { text: "Superhuman strength",  type: "type1"},
+            { text: "Read minds",  type: "type2"},
+            { text: "Shape-shifting",  type: "type3"},
+            { text: "Healing", type: "type4"},
+        ]
     },
     {
         question: "As night falls, the stars grant you one wish. What would you rather be?",
         imageSrc: "images/image10.png",
-        answers: ["To be Respected", "To be Trusted", "To be Envied", "To be Loved"]
+        answers: [
+            { text:"Respected",  type: "type1"},
+            { text:"Trusted",  type: "type2"},
+            { text:"Envied",  type: "type3"},
+            { text: "Loved", type: "type4"},
+        ]
     },
     {
         question: "When you wake up, you will receive a box. Which one will you select?",
         imageSrc: "images/image11.png",
-        answers: ["A heavy golden box with a silver-leaf ribbon", "Ancient wood crafted box, secured with magic", "A colorful box with a radiant glow", "A mossy box wrapped with healing herbs"]
+        answers: [
+            { text:"A heavy golden box with a silver-leaf ribbon",  type: "type1"},
+            { text: "Ancient wood crafted box, secured with magic",  type: "type2"},
+            { text: "A colorful box with a radiant glow",  type: "type3"},
+            { text: "A mossy box wrapped with healing herbs", type: "type4"},
+        ]
     },
     {
         question: "With the journey coming to an end, what quality of character resonates with you the most?",
         imageSrc: "images/image12.png",
-        answers: ["To be Brave", "To be Wise", "To be Compassionate", "To be Loyal"]
+        answers: [
+            { text:"To be Brave",   type: "type1"},
+            { text:"To be Wise",   type: "type2"},
+            { text:"To be Compassionate",   type: "type3"},
+            { text:"To be Loyal",  type: "type4"},
+        ]
     },
 ]
 
@@ -76,7 +138,7 @@ let currentQuestion = 0;
 let results = {
     //phoenix
     type1: 0,
-    //elf
+    //wizard
     type2: 0,
     //fairy
     type3: 0,
@@ -84,11 +146,28 @@ let results = {
     type4: 0
 };
 
+//music is here
+background.loop = true;
+background.volume = 0.25;
+
+soundButton.addEventListener('click', function() {
+    playClickSound(); 
+    if (background.paused) {
+        background.play();
+        soundButton.textContent = "🔊";
+    } else {
+        background.pause();
+        soundButton.textContent = "🔇";
+    }
+});
+
 startButton.addEventListener('click', function() {
     audio.play();
+    background.play();
     document.querySelector('.start-page').classList.add('hide');
     quizPage.classList.remove('hide');
     updateQuestion();
+    updateProgressBar(0);
     document.body.style.backgroundImage = "url('images/background.png')";
     
 });
@@ -105,16 +184,18 @@ nextButton.addEventListener('click', function(){
     playClickSound();
     const selectedButton = document.querySelector('.optionButton.selected');
     if (selectedButton) {
-        // move to the next question
-        if(currentQuestion >= questions.length) {
-            displayResults();
-        } else {
-            updateQuestion();
-        }
         // add points based on the selected button
         const selectedType = selectedButton.dataset.type;
         results[selectedType]++;
 
+        // move to the next question
+        if (currentQuestion < questions.length - 1) {
+            currentQuestion++;
+            updateQuestion();
+            updateProgressBar(currentQuestion);
+        } else {
+            displayResults();
+        }
     } else {
         alert("please select an option before proceeding!");
     }
@@ -139,9 +220,13 @@ function updateQuestion() {
     questionText.textContent = currentQuestionData.question;
     questionImage.src = currentQuestionData.imageSrc;
 
+    const shuffledAnswers = [...currentQuestionData.answers];
+    shuffle(shuffledAnswers);
+
     // update answer options
     for (let i = 0; i < optionButtons.length; i++) {
-        optionButtons[i].textContent = currentQuestionData.answers[i];
+        optionButtons[i].textContent = shuffledAnswers[i].text;
+        optionButtons[i].dataset.type = shuffledAnswers[i].type;
     }
 
     //remove selected every question!!!!!!!!
@@ -152,8 +237,7 @@ function updateQuestion() {
         } else {
             nextButton.textContent = "NEXT";
         }
-        currentQuestion++;
-        updateProgressBar();
+
 }
 
 
@@ -184,7 +268,7 @@ function displayResults() {
             result.textContent = "Your personality type is: Phoenix";
             break;
         case "type2":
-            result.textContent = "Your personality type is: Elf";
+            result.textContent = "Your personality type is: Wizard";
             break;
         case "type3":
             result.textContent = "Your personality type is: Fairy";
@@ -196,10 +280,17 @@ function displayResults() {
     
 }
 
-function updateProgressBar() { 
-    var element = document.getElementById("myBar");
-    var totalQuestions = questions.length;
-    var width = ((currentQuestion-1) / totalQuestions) * 100;
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function updateProgressBar(currentQuestion) { 
+    const element = document.getElementById("myBar");
+    const totalQuestions = questions.length;
+    const width = (currentQuestion / totalQuestions) * 100;
     element.style.width = width + '%';
   } 
     

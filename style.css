@@ -16,11 +16,12 @@ html, body {
 }
 
 .container {
+    position: relative;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    justify-content: center;
 }
 
 /* start page info :) */
@@ -175,6 +176,25 @@ html, body {
     border-radius:20px;
   }
 
+/* sound button */
+.soundBar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#soundButton {
+    padding: 8px 10px;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: #34366e;
+    border: none;
+}
+
+#soundButton:hover {
+    cursor: pointer;
+    background-color: #434585;
+}
 
 /* 
 keep at the end  */
