@@ -9,6 +9,7 @@ const quizPage = document.getElementById('quiz-page');
 const soundButton = document.getElementById('soundButton');
 const audio = new Audio("audio/click.mp3");
 const background = new Audio ("audio/background-music.mp3");
+const resultImage = document.getElementById('resultImage');
 
 const questions = [
     {
@@ -261,20 +262,27 @@ function calculateResult() {
 function displayResults() {
     const personalityType = calculateResult();
     quizPage.classList.add('hide');
+    result.classList.remove('hide');
 
     
     switch (personalityType) {
         case "type1":
-            result.textContent = "Your personality type is: Phoenix";
+            resultImage.src = "images/Phoenix.png";
+            resultImage.alt = "Phoenix";
             break;
         case "type2":
-            result.textContent = "Your personality type is: Wizard";
+            resultImage.src = "images/Wizard.png";
+            resultImage.alt = "Wizard";
             break;
         case "type3":
             result.textContent = "Your personality type is: Fairy";
             break;
         case "type4":
             result.textContent = "Your personality type is: Mermaid";
+            break;
+        default:
+            resultImage.src = "";
+            resultImage.alt = "";
             break;
     }
     
