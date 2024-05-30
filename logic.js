@@ -54,7 +54,7 @@ const questions = [
     },
     {
         question: "Suddenly, a mysterious figure emerges from the shadows. What is your initial reaction?",
-        imageSrc: "images/placeholder.jpg",
+        imageSrc: "images/image5.png",
         answers: [
             { text: "Remain vigilant and prepare for risks", type: "type1"},
             { text: "Try to understand its identity", type: "type2"},
@@ -64,7 +64,7 @@ const questions = [
     },
     {
         question: "You receive a gift from the mysterious figure: a new animal companion to support you on your journey. What do you choose?",
-        imageSrc: "images/placeholder.jpg",
+        imageSrc: "images/image6.png",
         answers: [
             { text: "A fierce wolf", type: "type1"},
             { text: "A resourceful owl", type: "type2"},
@@ -74,7 +74,7 @@ const questions = [
     },
     {
         question: "Your newfound companion shows their appreciation with a gift. Which do you choose?",
-        imageSrc: "images/placeholder.jpg",
+        imageSrc: "images/image7.png",
         answers: [
             { text: "A magical compass",  type: "type1"},
             { text: "An ancient book",  type: "type2"},
@@ -84,7 +84,7 @@ const questions = [
     },
     {
         question: "The garden calls for you. What draws you in?",
-        imageSrc: "images/placeholder.jpg",
+        imageSrc: "images/image8.png",
         answers: [
             { text: "The twisting tree bearing golden apples",  type: "type1"},
             { text: "The artifact embedded within the tree",  type: "type2"},
