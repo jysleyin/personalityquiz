@@ -275,10 +275,12 @@ function displayResults() {
             resultImage.alt = "Wizard";
             break;
         case "type3":
-            result.textContent = "Your personality type is: Fairy";
+            resultImage.src = "images/Fairy.png";
+            resultImage.alt = "Fairy";
             break;
         case "type4":
-            result.textContent = "Your personality type is: Mermaid";
+            resultImage.src = "images/Mermaid.png";
+            resultImage.alt = "Mermaid";
             break;
         default:
             resultImage.src = "";
