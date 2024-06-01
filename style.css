@@ -195,12 +195,39 @@ html, body {
     cursor: pointer;
     background-color: #434585;
 }
+
+#results-page {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
 #resultImage {
     max-width: 100%; 
     max-height: 800px;
     display: block; 
     margin: 0 auto; 
 }
+
+#resultStats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    margin-top: -30px;
+}
+
+.stat {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    margin-right: 10px;
+}
+
 /* 
 keep at the end  */
 .hide {

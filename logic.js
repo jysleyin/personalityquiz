@@ -10,6 +10,7 @@ const soundButton = document.getElementById('soundButton');
 const audio = new Audio("audio/click.mp3");
 const background = new Audio ("audio/background-music.mp3");
 const resultImage = document.getElementById('resultImage');
+const resultStats = document.getElementById('resultStats');
 
 const questions = [
     {
@@ -147,6 +148,14 @@ let results = {
     type4: 0
 };
 
+let stats = {
+    strength: 0,
+    wisdom: 0,
+    charm: 0,
+    support: 0
+};
+
+
 //music is here
 background.loop = true;
 background.volume = 0.25;
@@ -188,6 +197,22 @@ nextButton.addEventListener('click', function(){
         // add points based on the selected button
         const selectedType = selectedButton.dataset.type;
         results[selectedType]++;
+
+        // update stats based on the selected type
+        switch (selectedType) {
+            case "type1":
+                stats.strength++;
+                break;
+            case "type2":
+                stats.wisdom++;
+                break;
+            case "type3":
+                stats.charm++;
+                break;
+            case "type4":
+                stats.support++;
+                break;
+        }
 
         // move to the next question
         if (currentQuestion < questions.length - 1) {
@@ -287,6 +312,14 @@ function displayResults() {
             resultImage.alt = "";
             break;
     }
+
+    // sisplay stats
+    resultStats.innerHTML = `
+        <p class="stat">Strength: ${stats.strength}</p>
+        <p class="stat">Wisdom: ${stats.wisdom}</p>
+        <p class="stat">Charm: ${stats.charm}</p>
+        <p class="stat">Support: ${stats.support}</p>
+    `;
     
 }
 
