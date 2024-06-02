@@ -204,41 +204,91 @@ html, body {
 
 #resultImage {
     max-width: 100%; 
-    max-height: 800px;
     display: block; 
     margin: 0 auto; 
 }
+
 
 #resultStats {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
     color: white;
     width: 100%;
-    margin-top: -30px;
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
+    padding-top: -25px; 
 }
 
 .stat {
     background-color: white;
+    border-radius: 25px;
     color: black;
     padding: 10px;
-    border-radius: 50px;
     text-align: center;
     margin-right: 10px;
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
+    font-size: 25px;
 }
 
+@media (max-width: 600px) {
+    .questionheader {
+        border-radius: 15px;
+        padding: 10px;
+    }
+    
+    #questionNumber {
+        font-size: 2.5vh;
+        max-width: 30%;
+        padding: 10px;
+    }
+    
+    #questionText {
+        font-size: 15px;
+        padding: 10px;
+        
+    }
 
-#results-page {
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
+    #resultImage {
+        max-height: 400px; 
+    }
+    
+    .stat{
+        font-size: 15px;
+    }
+
+    #resultStats {
+        margin-top: -10px;
+    }
+
+    .optionButton {
+        font-size: 15px;
+        padding: 15px;
+    }
+    
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    #resultImage {
+        max-height: 400px; /* For medium devices */
+    }
+
+    .stat{
+        font-size: 20px;
+    }
+
+    #resultStats {
+        margin-top: -30px;
+    }
+}
+
+@media (min-width: 1201px) {
+    #resultImage {
+        max-height: 800px; /* For large devices */
+    }
 }
 
 /* 

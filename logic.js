@@ -20,11 +20,11 @@ const questions = [
             { text: "Cobbled street with lantern-lit alleys", type: "type1" },
             { text: "Twisting, leaf-strewn trail", type: "type2" },
             { text: "The flowery lane with tiny whispers", type: "type3" },
-            { text: "The water and occupied animals path", type: "type4" }
+            { text: "The path of water and the animals that inhabit it", type: "type4" }
         ]
     },
     {
-        question: "Following the chosen path leads you to a secluded town. Which building do you enter into?",
+        question: "Following the chosen path leads you to a secluded town. Which building do you enter?",
         imageSrc: "images/image2.png",
         answers: [
             { text: "Straight to town hall", type: "type1" },
@@ -80,7 +80,7 @@ const questions = [
             { text: "A magical compass",  type: "type1"},
             { text: "An ancient book",  type: "type2"},
             { text: "A musical instrument",  type: "type3"},
-            { text: "Your family's keepsake box",  type: "type4"},
+            { text: "Your family's heirloom",  type: "type4"},
         ]
     },
     {
@@ -114,7 +114,7 @@ const questions = [
         ]
     },
     {
-        question: "When you wake up, you will receive a box. Which one will you select?",
+        question: "When you wake up, you'll find a selection of boxes. Which one will you choose?",
         imageSrc: "images/image11.png",
         answers: [
             { text:"A heavy golden box with a silver-leaf ribbon",  type: "type1"},
