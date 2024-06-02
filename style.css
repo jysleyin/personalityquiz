@@ -226,12 +226,19 @@ html, body {
     background-color: white;
     color: black;
     padding: 10px;
-    border-radius: 15px;
+    border-radius: 50px;
     text-align: center;
     margin-right: 10px;
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
+}
+
+
+#results-page {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 /* 
