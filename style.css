@@ -38,7 +38,7 @@ html, body {
 
 
 .start-page img {
-    margin-bottom: -30px; 
+    margin-bottom: -50px; 
     max-width: 80%;
     height: auto;
 }
@@ -50,6 +50,7 @@ html, body {
     width: 50%; 
     max-width: 20%; 
     height: auto; 
+    margin-top: -80px;
 }
 
 #startButton:hover {
@@ -218,7 +219,7 @@ html, body {
     font-family: "VT323", monospace;
     font-weight: 400;
     font-style: normal;
-    padding-top: -25px; 
+    margin-top: -50px;
 }
 
 .stat {
@@ -269,11 +270,19 @@ html, body {
         padding: 15px;
     }
     
+    .start-page img {
+        margin-bottom: -20px; 
+ 
+    }
+    
+    #startButton {
+        margin-top: -20px; 
+    }
 }
 
 @media (min-width: 601px) and (max-width: 1200px) {
     #resultImage {
-        max-height: 400px; /* For medium devices */
+        max-height: 400px; 
     }
 
     .stat{
@@ -283,11 +292,20 @@ html, body {
     #resultStats {
         margin-top: -30px;
     }
+
+    .start-page img {
+        margin-bottom: -20px; 
+ 
+    }
+    
+    #startButton {
+        margin-top: -10px; 
+    }
 }
 
 @media (min-width: 1201px) {
     #resultImage {
-        max-height: 800px; /* For large devices */
+        max-height: 800px; 
     }
 }
 
