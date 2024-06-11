@@ -11,6 +11,7 @@ const audio = new Audio("audio/click.mp3");
 const background = new Audio ("audio/background-music.mp3");
 const resultImage = document.getElementById('resultImage');
 const resultStats = document.getElementById('resultStats');
+const restartBtn = document.getElementById('restartBtn');
 
 const questions = [
     {
@@ -340,4 +341,32 @@ function updateProgressBar(currentQuestion) {
 function playClickSound() {
     audio.currentTime = 0; 
     audio.play();
+}
+
+restartBtn.addEventListener('click', function() {
+    playClickSound();
+    resetQuiz();
+});
+
+function resetQuiz() {
+    currentQuestion = 0;
+    results = {
+        type1: 0,
+        type2: 0,
+        type3: 0,
+        type4: 0
+    };
+
+    stats = {
+        strength: 0,
+        wisdom: 0,
+        charm: 0,
+        support: 0
+    };
+
+    result.classList.add('hide');
+    quizPage.classList.remove('hide');
+    updateQuestion();
+    updateProgressBar(0);
+    document.body.style.backgroundImage = "url('images/background.png')";
 }

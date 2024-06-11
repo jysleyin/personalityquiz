@@ -22,6 +22,7 @@ html, body {
     justify-content: center;
     align-items: center;
     justify-content: center;
+    z-index: 999;
 }
 
 /* start page info :) */
@@ -217,9 +218,9 @@ html, body {
     color: white;
     width: 100%;
     font-family: "VT323", monospace;
-    font-weight: 400;
+    font-weight: 400px;
     font-style: normal;
-    margin-top: -50px;
+    margin-top: -20px;
 }
 
 .stat {
@@ -305,10 +306,31 @@ html, body {
 
 @media (min-width: 1201px) {
     #resultImage {
-        max-height: 800px; 
+        max-height: 600px; 
     }
 }
 
+#restartBtn {
+    font-size: 20px;
+    margin: 30px;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 20px;
+    cursor:pointer;
+    border-width: 0;
+    transition-duration: 0.4s;
+}
+
+#restartBtn:hover {
+    background-color: #0d0b1b;
+    color: white;
+    cursor: pointer;
+}
+.sparkle {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1; /* Ensure sparkles are below buttons */
+}
 /* 
 keep at the end  */
 .hide {
