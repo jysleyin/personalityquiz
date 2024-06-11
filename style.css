@@ -65,17 +65,17 @@ html, body {
     padding: 15px;
     background-color: white;
     border-radius: 25px;
-    border: 2px solid #1a173a;
+    border: 2px solid #0d0b1b;
     transition-duration: 0.4s;
     /* flex: 1 1 calc(100% - 50px); */
 }
 
 .optionButton.selected {
-    background-color: #1a173a;
+    background-color: #0d0b1b;
     color: white;
 }
 .optionButton:hover {
-    background-color: #1a173a;
+    background-color: #0d0b1b;
     color: white;
     cursor: pointer;
 }
@@ -84,7 +84,7 @@ html, body {
     font-size: 20px;
     padding: 10px 20px;
     background-color: white;
-    border: 2px solid #1a173a;
+    border: 2px solid #0d0b1b;
     border-radius: 20px;
     cursor:pointer;
     transition-duration: 0.4s;
@@ -92,7 +92,7 @@ html, body {
 
 
 #nextButton:hover {
-    background-color: #1a173a;
+    background-color: #0d0b1b;
     color: white;
     cursor: pointer;
 }
@@ -173,7 +173,7 @@ html, body {
 #myBar {
     width: 1%;
     height: 30px;
-    background-color: #1a173a;
+    background-color: #0d0b1b;
     border-radius:20px;
   }
 
